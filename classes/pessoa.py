@@ -9,7 +9,7 @@ class Pessoa():
 
     def mostra_saldo(self):
         if self.nacionalidade == 'br':
-            print('Seja bem vindo, {}! SEu saldo é ${}!'.format(self.nome,self.saldo))
+            print('Seja bem vind{}, {}! Seu saldo é ${}!'.format('o' if self.genero == 'M' else 'a',self.nome,self.saldo))
         else:
             print('Welcome {}! Your balance is ${}!'.format(self.nome,self.saldo))
     
@@ -22,4 +22,10 @@ class Pessoa():
         if self.saldo < 10000:
             mensalidade =+ 20
         return mensalidade
+
+    def mostra_seguro(self):
+        if self.nacionalidade == 'br':
+            print('Sua mensalidade é de ${}'.format(self.calcula_seguro()))
+        else:
+            print('Your monthly payment is ${}'.format(self.calcula_seguro()))
         
