@@ -19,11 +19,7 @@ Crie um sistema com 3 classes:
         Risco
         Retorno_final
         
-    verificar(self, pessoa)
-        if pessoa.perfil == moderado:
-            for x in ativos:
-                if x.risco < 20:
-                    pessoa.comprar(x)
+    excecuta()
 
 3 - Gerencia:
     Pessoa
