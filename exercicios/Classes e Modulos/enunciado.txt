@@ -3,7 +3,6 @@ Crie um sistema com 3 classes:
     __init__()
         Nome
         Perfil (moderado, avesso ao risco, arriscador)
-        self.perfil = 20000
         Saldo
         Ativo
     
