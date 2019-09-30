@@ -1,0 +1,31 @@
+Crie um sistema com 3 classes:
+1 - Classe deve ser uma Pessoa:
+    __init__()
+        Nome
+        Perfil (moderado, avesso ao risco, arriscador)
+        self.perfil = 20000
+        Saldo
+        Ativo
+    
+    comprar()
+    vender()
+    verificar_saldo_atual()
+    verificar_saldo_final()
+    
+2 - Classe deve ser um Ativo:
+    __init__()
+        Nome
+        Preço
+        Risco
+        Retorno_final
+        
+    verificar(self, pessoa)
+        if pessoa.perfil == moderado:
+            for x in ativos:
+                if x.risco < 20:
+                    pessoa.comprar(x)
+
+3 - Gerencia:
+    Pessoa
+    Ativo
+    indica_ativo(titulo,pessoa) retorna sim ou não
