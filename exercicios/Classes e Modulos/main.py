@@ -15,6 +15,7 @@ nich = Pessoa('Nicholson','r',740)
 pessoas = [manzi,bailao,tiagod,lott,nich]
 
 bailao.verificar_saldo()
+
 """
 for i in pessoas:
     for j in ativos:
@@ -22,6 +23,8 @@ for i in pessoas:
         if recomenda:
             i.comprar(j)
 """
+
+bailao.comprar(bitcoin)
 bailao.verificar_saldo()
 bailao.verifica_saldo_final()
 

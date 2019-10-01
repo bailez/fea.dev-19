@@ -24,6 +24,7 @@ class Pessoa:
                 for j,k in zip(self.ativos,range(total_de_ativos)):
                     if item == j:
                         self.ativos.pop(k)
+                        self.saldo = self.saldo + j.retorno
                 print(str(i + 1), f'{item.nome} vendido com sucesso')
         else:
             print(f'{self.nome} não possui nenhum {item.nome}')
