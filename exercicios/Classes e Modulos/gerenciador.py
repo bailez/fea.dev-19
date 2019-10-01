@@ -2,9 +2,7 @@ from pessoa import Pessoa
 from ativo import Ativo
 
 class Gerenciador:
-
-    
-    
+   
     def indica_ativo(self, pessoa, ativo):
         perfil = pessoa.perfil
         risco = ativo.risco

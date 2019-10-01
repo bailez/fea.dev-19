@@ -12,18 +12,19 @@ class Pessoa:
             print(f'{self.nome} comprou {quantidade} {item.nome} e gastou um totl de $',preco*quantidade)
             self.saldo = self.saldo - preco*quantidade
             for i in range(quantidade):
-                print(int(i) + 1, '{item.nome} comprado com sucesso')
+                print(str(i+1), f'{item.nome} comprado com sucesso')
                 self.ativos.append(item)
         else:
             print(f'{self.nome} não tem saldo suficiente para comprar {quantidade} {item.nome}')        
         
     def vender(self, item,quantidade=1):
+        total_de_ativos = len(self.ativos)
         if item in self.ativos:
             for i in range(quantidade):
-                for j in self.ativos:
+                for j,k in zip(self.ativos,range(total_de_ativos)):
                     if item == j:
-                        self.ativos.pop(j)
-                print(int(i) + 1, '{item.nome} vendido com sucesso')
+                        self.ativos.pop(k)
+                print(str(i + 1), f'{item.nome} vendido com sucesso')
         else:
             print(f'{self.nome} não possui nenhum {item.nome}')
 
@@ -36,5 +37,5 @@ class Pessoa:
             ativo.excecuta()
             self.vender(ativo)
         
-        print('Saldo final é de {self.saldo}')
+        print(f'Saldo final de {self.nome} é de {self.saldo}')
         return self.saldo        
