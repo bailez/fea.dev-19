@@ -14,17 +14,17 @@ lott = Pessoa('Lott','m', 850)
 nich = Pessoa('Nicholson','r',740)
 pessoas = [manzi,bailao,tiagod,lott,nich]
 
+def recomendacoes():
+    for i in pessoas:
+        for j in ativos:
+            recomenda = Gerenciador().indica_ativo(i,j)
+            if recomenda:
+                i.comprar(j)
+        i.verifica_saldo_final()
+
 bailao.verificar_saldo()
-
-"""
-for i in pessoas:
-    for j in ativos:
-        recomenda = Gerenciador().indica_ativo(i,j)
-        if recomenda:
-            i.comprar(j)
-"""
-
 bailao.comprar(bitcoin)
 bailao.verificar_saldo()
 bailao.verifica_saldo_final()
 
+#Ao chamar a função recomendacoes o script recomenda todos ativos para todas as pessoas e compra dependendo do perfil
