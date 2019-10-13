@@ -1,0 +1,4 @@
+"""
+Utilizando a API do banco central e a biblioteca pandas crie um dataframe com
+duas séries diferentes e encontre sua matriz de correlação
+"""
